@@ -176,71 +176,90 @@ h2 {
 .data-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed; /* Ensures fixed table layout */
+    table-layout: auto; /* Allows table to adjust based on content */
     min-width: 800px; /* Ensures table doesn't break layout on smaller screens */
 }
 
 .data-table th,
 .data-table td {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: 4px 8px; /* Reduced padding */
+    font-size: 0.85rem; /* Reduced font size */
     text-align: left;
     border-bottom: 1px solid var(--border-dark);
     word-wrap: break-word; /* Allows text to wrap within cells */
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal; /* Enables wrapping */
 }
 
 .data-table th {
     background: var(--bg-dark);
     color: var(--text-secondary);
     font-weight: 500;
+    font-size: 0.9rem; /* Slightly larger font for headers */
 }
 
 /* Column Specific Styles */
 .col-id {
-    width: 150px; /* Fixed width for ID */
+    width: 8%; /* Percentage-based width */
 }
 
 .col-domain {
-    width: 150px; /* Fixed width for Domain */
+    width: 8%; /* Percentage-based width */
 }
 
 .col-question {
-    width: 300px; /* Wider width for Question */
+    width: 20%; /* Wider width for Question */
 }
 
 .col-options {
-    width: 250px; /* Fixed width for Options */
+    width: 15%; /* Percentage-based width */
 }
 
 .col-correct-answer {
-    width: 100px; /* Fixed width for Correct Answer */
+    width: 5%; /* Percentage-based width */
+    text-align: center;
 }
 
 .col-chatgpt-response {
-    width: 200px; /* Fixed width for ChatGPT Response */
+    width: 10%; /* Percentage-based width */
 }
 
 .col-selected-answer {
-    width: 150px; /* Fixed width for Selected Answer */
+    width: 5%; /* Percentage-based width */
+    text-align: center;
 }
 
 .col-is-correct {
-    width: 100px; /* Fixed width for Is Correct */
+    width: 5%; /* Percentage-based width */
+    text-align: center;
 }
 
 .col-response-time {
-    width: 150px; /* Fixed width for Response Time */
+    width: 10%; /* Percentage-based width */
 }
 
 .col-processed-at {
-    width: 200px; /* Fixed width for Processed At */
+    width: 14%; /* Percentage-based width */
 }
 
-/* Adjustments for shorter columns */
-.col-correct-answer,
-.col-is-correct {
-    text-align: center;
+/* Hover and Striped Rows */
+.data-table tbody tr:hover {
+    background-color: rgba(37, 99, 235, 0.1); /* Light accent color */
+}
+
+.data-table tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05); /* Slightly lighter than bg-darker */
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: transparent;
+}
+
+/* Sticky Headers */
+.data-table thead th {
+    position: sticky;
+    top: 0;
+    background: var(--bg-dark);
+    z-index: 1;
 }
 
 /* Testing Section Styles */
@@ -361,15 +380,15 @@ footer {
     .col-is-correct,
     .col-response-time,
     .col-processed-at {
-        width: 100px;
+        width: 8%; /* Reduced widths */
     }
 
     .col-question {
-        width: 200px;
+        width: 18%; /* Reduced width */
     }
 
     .col-options,
     .col-chatgpt-response {
-        width: 150px;
+        width: 12%; /* Reduced widths */
     }
 }

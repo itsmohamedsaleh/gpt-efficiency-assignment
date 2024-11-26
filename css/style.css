@@ -176,6 +176,7 @@ h2 {
 .data-table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed; /* Ensures fixed table layout */
     min-width: 800px; /* Ensures table doesn't break layout on smaller screens */
 }
 
@@ -184,7 +185,9 @@ h2 {
     padding: var(--spacing-sm) var(--spacing-md);
     text-align: left;
     border-bottom: 1px solid var(--border-dark);
-    white-space: nowrap; /* Prevents text from wrapping */
+    word-wrap: break-word; /* Allows text to wrap within cells */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .data-table th {
@@ -193,8 +196,51 @@ h2 {
     font-weight: 500;
 }
 
-.data-table td {
-    color: var(--text-primary);
+/* Column Specific Styles */
+.col-id {
+    width: 150px; /* Fixed width for ID */
+}
+
+.col-domain {
+    width: 150px; /* Fixed width for Domain */
+}
+
+.col-question {
+    width: 300px; /* Wider width for Question */
+}
+
+.col-options {
+    width: 250px; /* Fixed width for Options */
+}
+
+.col-correct-answer {
+    width: 100px; /* Fixed width for Correct Answer */
+}
+
+.col-chatgpt-response {
+    width: 200px; /* Fixed width for ChatGPT Response */
+}
+
+.col-selected-answer {
+    width: 150px; /* Fixed width for Selected Answer */
+}
+
+.col-is-correct {
+    width: 100px; /* Fixed width for Is Correct */
+}
+
+.col-response-time {
+    width: 150px; /* Fixed width for Response Time */
+}
+
+.col-processed-at {
+    width: 200px; /* Fixed width for Processed At */
+}
+
+/* Adjustments for shorter columns */
+.col-correct-answer,
+.col-is-correct {
+    text-align: center;
 }
 
 /* Testing Section Styles */
@@ -281,13 +327,6 @@ footer {
     margin-bottom: var(--spacing-sm);
 }
 
-/* Results Explanation Styles */
-.results-explanation {
-    margin-top: 20px;
-    font-style: italic;
-    color: #f1f5f9; /* Ensures visibility on dark background */
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .sidebar {
@@ -313,5 +352,24 @@ footer {
 
     .data-table {
         min-width: 600px; /* Adjusted for smaller screens */
+    }
+
+    /* Adjust column widths for smaller screens */
+    .col-id,
+    .col-domain,
+    .col-correct-answer,
+    .col-is-correct,
+    .col-response-time,
+    .col-processed-at {
+        width: 100px;
+    }
+
+    .col-question {
+        width: 200px;
+    }
+
+    .col-options,
+    .col-chatgpt-response {
+        width: 150px;
     }
 }

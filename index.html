@@ -2,91 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ChatGPT Efficiency Validator</title>
-    <link rel="stylesheet" href="https://itsmohamedsaleh.github.io/gpt-efficiency-assignment/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Validator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 </head>
 <body>
     <aside class="sidebar">
         <div class="sidebar-header">
-            <h1 class="sidebar-logo">ChatGPT Validator</h1>
+            <h1 id="chatgpt-validator" class="sidebar-logo">ChatGPT Validator</h1>
         </div>
-        <nav>
-            <div class="nav-group">
-                <span class="nav-label">Sections</span>
-                <a href="#introduction" class="nav-link active">Introduction</a>
-                <a href="#profile" class="nav-link">Profiles</a>
-                <a href="#research-approach" class="nav-link">Research Approach</a>
-                <a href="#dataset-overview" class="nav-link">Dataset Overview</a>
-                <a href="#results" class="nav-link">Results</a>
-                <a href="#testing" class="nav-link">Test Chat</a>
-            </div>
+
+        <nav class="nav-group">
+            <span class="nav-label">Sections</span>
+            <a href="#introduction" class="nav-link active">Introduction</a>
+            <a href="#profile" class="nav-link">Profiles</a>
+            <a href="#research-approach" class="nav-link">Research Approach</a>
+            <a href="#dataset-overview" class="nav-link">Dataset Overview</a>
+            <a href="#results" class="nav-link">Results</a>
+            <a href="#testing" class="nav-link">Test Chat</a>
         </nav>
     </aside>
 
-    <div class="main-content">
+    <main class="main-content">
         <div class="content-container">
-            <section id="introduction" class="panel active">
+            <div id="introduction" class="section panel active">
                 <h2>Introduction</h2>
-                <p>The aim of this project is to develop an interactive platform that would evaluate and present ChatGPT's performance in different contexts. </p>
-                <p> The site has several objectives: to showcase the web development aspects of a data-oriented and customer-friendly platform and to highlight the capabilities of ChatGPT, in a conversational setting. With the help of data from various disciplines such as history, social science, and Computer security, this site enables users to assess the effectiveness and the weaknesses of ChatGPT when used in various domains.</p>
-                <p> The project utilizes functions of both frontend web application development and backend data processing. Technologies applied include but are not limited to MongoDB, Node.js, and the ChatGPT API to present the outcomes in a way that is broad appeal, interesting, and useful.</p>
-            </section>
+                <p>The aim of this project is to develop an interactive platform that would evaluate and present ChatGPT's performance in different contexts.</p>
+                <p>The site has several objectives: to showcase the web development aspects of a data-oriented and customer-friendly platform and to highlight the capabilities of ChatGPT, in a conversational setting. With the help of data from various disciplines such as history, social science, and Computer security, this site enables users to assess the effectiveness and the weaknesses of ChatGPT when used in various domains.</p>
+                <p>The project utilizes functions of both frontend web application development and backend data processing. Technologies applied include but are not limited to MongoDB, Node.js, and the ChatGPT API to present the outcomes in a way that is broad appeal, interesting, and useful.</p>
+            </div>
 
-            <section id="profile" class="panel">
-                <h2>Yaseen</h2>
-                <p><strong> IT Student </strong></p>
-                <p>Background: Html & Javascript</p>
-                <br>
-                <h2>Mohamed</h2>
-                <p><strong> IT Student </strong></p>
-                <p>Background: Hosting & CSS</p>
-                <br>
-                <h2>Josh</h2>
-                <p><strong> IT Student </strong></p>
-                <p>Background: MongoDB & Server Set-Up</p>
-            </section>
-
-            <section id="research-approach" class="panel">
-                <h2>Research Approach</h2>
-                <p>We had to test the performance of Chatgpt, so we developed an interactive website based on front-end and back-end technologies. The primary database for storing data related to the evaluations including the questions, the answers, and the scoring metrics is MongoDB. The backend is built upon Node.js, allowing everything from data management to embedding the ChatGPT API. It is this API that provides the questions and generates answers that, in turn, are used to evaluate the accuracy, relevance, and consistency of ChatGPT. 'Pods' can be used to present the interface of this website to the visitors and in turn, it allows its visitors to test the outcomes and observe the site's ability, performance, and weaknesses of Chatgpt.</p>
-            </section>
-
-            <section id="dataset-overview" class="panel">
-                <h2>Dataset Overview</h2>
-                <p>The dataset consists of a tailored set of questions covering three areas, in particular: History, Social Science, and Computer Security. This variety guarantees that the overall assessment of ChatGPT is exposed to a versatile outlook regarding topics and knowledge domains. Each of the questions was formulated to assess the different elements of the model’s capabilities such as functional correctness, comprehension, and even level of detail. This examination aims to indicate the scope of applicability of the ChatGPT system in different disciplines showcasing its strengths and weaknesses.</p>
-            </section>
-
-            <section id="results" class="panel">
-                <h2>Results</h2>
-                <p></p>
-                <div class="visualization-placeholder">
-                    <p>This section has been left intentionally blank for future visualizations: Future improvements will include data that is obtainable for the user in several interactive charts and graphs representing what ChatGPT performance metrics depicted in each of the domains (e.g., accuracy scores, response times). These will allow the users to plot the performance of the model in the various topics & their specific strengths and weaknesses targeting subjects with potential.</p>
+            <div id="profile" class="section panel">
+                <h2>Profiles</h2>
+                <div class="profile-section">
+                    <h3>Yaseen</h3>
+                    <p><strong>IT Student</strong></p>
+                    <p>Background: Html & Javascript</p>
                 </div>
-            </section>
+                <div class="profile-section">
+                    <h3>Mohamed</h3>
+                    <p><strong>IT Student</strong></p>
+                    <p>Background: Hosting & CSS</p>
+                </div>
+                <div class="profile-section">
+                    <h3>Josh</h3>
+                    <p><strong>IT Student</strong></p>
+                    <p>Background: MongoDB & Server Set-Up</p>
+                </div>
+            </div>
 
-            <section id="testing" class="panel">
+            <div id="research-approach" class="section panel">
+                <h2>Research Approach</h2>
+                <p>We had to test the performance of Chatgpt, so we developed an interactive website based on front-end and back-end technologies. The primary database for storing data related to the evaluations including the questions, the answers, and the scoring metrics is MongoDB. The backend is built upon Node.js, allowing everything from data management to embedding the ChatGPT API.</p>
+            </div>
+
+            <div id="dataset-overview" class="section panel">
+                <h2>Dataset Overview</h2>
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Domain</th>
+                                <th>Question</th>
+                                <th>Options</th>
+                                <th>Correct Answer</th>
+                                <th>ChatGPT Response</th>
+                                <th>Is Correct</th>
+                                <th>Response Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="csvData">
+                            <!-- Data will be populated via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="results" class="section panel">
+                <h2>Results</h2>
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Computer Security</h3>
+                        <p>Total Questions: 100</p>
+                        <p>Processed Questions: 100</p>
+                        <p>Average Response Time: 474.54ms</p>
+                        <p>Accuracy: 85.0%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>History</h3>
+                        <p>Total Questions: 324</p>
+                        <p>Processed Questions: 100</p>
+                        <p>Average Response Time: 444.44ms</p>
+                        <p>Accuracy: 84.0%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Social Science</h3>
+                        <p>Total Questions: 201</p>
+                        <p>Processed Questions: 100</p>
+                        <p>Average Response Time: 455.37ms</p>
+                        <p>Accuracy: 88.0%</p>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="chart-container">
+                    <h3>Accuracy by Domain (%)</h3>
+                    <canvas id="accuracyChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Average Response Time by Domain (ms)</h3>
+                    <canvas id="responseTimeChart"></canvas>
+                </div>
+            </div>
+
+            <div id="testing" class="section panel">
+                <h2>Test Chat</h2>
                 <div class="testing-container">
-                    <p class="welcome-message">Let's Begin</p>
+                    <div class="welcome-message">Let's Begin</div>
                     <div class="input-section">
                         <div class="input-container">
-                            <input 
-                                type="text"
-                                class="chat-input"
-                                placeholder="Type your message here..."
-                                aria-label="Chat input"
-                            >
-                            <button class="send-button" aria-label="Send message">Send</button>
+                            <input type="text" class="chat-input" placeholder="Type your message...">
+                            <button class="send-button">Send</button>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
-    </div>
+    </main>
 
     <footer>
         <p>© 2024 ChatGPT Efficiency Validator. All rights reserved.</p>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

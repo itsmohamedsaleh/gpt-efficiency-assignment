@@ -48,7 +48,7 @@ body {
 }
 
 ol, ul {
-    padding-left: 20px;
+    padding-left: 40px; /* Increased from 20px to 40px for better indentation */
     margin-bottom: 15px;
 }
 
@@ -59,7 +59,7 @@ li {
 .results-explanation {
     margin-top: 20px;
     font-style: italic;
-    color: #333;
+    color: #f1f5f9; /* Updated color for better contrast against dark background */
 }
 
 .sidebar-header {
@@ -296,5 +296,9 @@ footer {
 
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    ol, ul {
+        padding-left: 30px; /* Slight adjustment for smaller screens if needed */
     }
 }

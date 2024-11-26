@@ -176,6 +176,7 @@ h2 {
 .data-table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 800px; /* Ensures table doesn't break layout on smaller screens */
 }
 
 .data-table th,
@@ -183,6 +184,7 @@ h2 {
     padding: var(--spacing-sm) var(--spacing-md);
     text-align: left;
     border-bottom: 1px solid var(--border-dark);
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
 .data-table th {
@@ -279,6 +281,13 @@ footer {
     margin-bottom: var(--spacing-sm);
 }
 
+/* Results Explanation Styles */
+.results-explanation {
+    margin-top: 20px;
+    font-style: italic;
+    color: #f1f5f9; /* Ensures visibility on dark background */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .sidebar {
@@ -300,5 +309,9 @@ footer {
 
     ol, ul {
         padding-left: 30px; /* Slight adjustment for smaller screens if needed */
+    }
+
+    .data-table {
+        min-width: 600px; /* Adjusted for smaller screens */
     }
 }

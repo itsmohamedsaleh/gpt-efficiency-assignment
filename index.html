@@ -96,68 +96,68 @@
                     <table class="data-table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Domain</th>
-                                <th>Question</th>
-                                <th>Options</th>
-                                <th>Correct Answer</th>
-                                <th>ChatGPT Response</th>
-                                <th>Selected Answer</th>
-                                <th>Is Correct</th>
-                                <th>Response Time</th>
-                                <th>Processed At</th>
+                                <th class="col-id">ID</th>
+                                <th class="col-domain">Domain</th>
+                                <th class="col-question">Question</th>
+                                <th class="col-options">Options</th>
+                                <th class="col-correct-answer">Correct Answer</th>
+                                <th class="col-chatgpt-response">ChatGPT Response</th>
+                                <th class="col-selected-answer">Selected Answer</th>
+                                <th class="col-is-correct">Is Correct</th>
+                                <th class="col-response-time">Response Time</th>
+                                <th class="col-processed-at">Processed At</th>
                             </tr>
                         </thead>
                         <tbody id="csvData">
                             <tr>
-                                <td>67453542268aa4370197bdfb</td>
-                                <td>Computer Security</td>
-                                <td>Which of the following styles of fuzzer is more likely to explore paths covering every line of code in the following program?</td>
-                                <td>Generational, Blackbox, Whitebox, Mutation-based</td>
-                                <td>C</td>
-                                <td>ANSWER: C</td>
-                                <td>C</td>
-                                <td>Yes</td>
-                                <td>963 ms</td>
-                                <td>2024-11-26T02:41:25.331Z</td>
+                                <td class="col-id">67453542268aa4370197bdfb</td>
+                                <td class="col-domain">Computer Security</td>
+                                <td class="col-question">Which of the following styles of fuzzer is more likely to explore paths covering every line of code in the following program?</td>
+                                <td class="col-options">Generational, Blackbox, Whitebox, Mutation-based</td>
+                                <td class="col-correct-answer">C</td>
+                                <td class="col-chatgpt-response">ANSWER: C</td>
+                                <td class="col-selected-answer">C</td>
+                                <td class="col-is-correct">Yes</td>
+                                <td class="col-response-time">963 ms</td>
+                                <td class="col-processed-at">2024-11-26T02:41:25.331Z</td>
                             </tr>
                             <tr>
-                                <td>67453542268aa4370197bdfc</td>
-                                <td>Computer Security</td>
-                                <td>Assume that a TLS connection has been established successfully between a client and a server. Establishing the session included checking the server certificate and executing a DiffieHelmann exchange, but the client did not provide a client certificate. Further, assume that the client and server are honest, that the client and server don’t leak their keys, and that the cryptography is good. Which of the following attacks does TLS protect against?
-                                    1. An attacker replaying bytes that a client sent earlier.
-                                    2. An attacker impersonating the server.</td>
-                                <td>True, True, False, False, True, False, False, True</td>
-                                <td>A</td>
-                                <td>ANSWER: A</td>
-                                <td>A</td>
-                                <td>Yes</td>
-                                <td>278 ms</td>
-                                <td>2024-11-26T02:41:25.617Z</td>
+                                <td class="col-id">67453542268aa4370197bdfc</td>
+                                <td class="col-domain">Computer Security</td>
+                                <td class="col-question">Assume that a TLS connection has been established successfully between a client and a server. Establishing the session included checking the server certificate and executing a DiffieHelmann exchange, but the client did not provide a client certificate. Further, assume that the client and server are honest, that the client and server don’t leak their keys, and that the cryptography is good. Which of the following attacks does TLS protect against?
+                                <br>1. An attacker replaying bytes that a client sent earlier.
+                                <br>2. An attacker impersonating the server.</td>
+                                <td class="col-options">True, True, False, False, True, False, False, True</td>
+                                <td class="col-correct-answer">A</td>
+                                <td class="col-chatgpt-response">ANSWER: A</td>
+                                <td class="col-selected-answer">A</td>
+                                <td class="col-is-correct">Yes</td>
+                                <td class="col-response-time">278 ms</td>
+                                <td class="col-processed-at">2024-11-26T02:41:25.617Z</td>
                             </tr>
                             <tr>
-                                <td>67453542268aa4370197bdfd</td>
-                                <td>Computer Security</td>
-                                <td>MIT’s Kerberos KDC server has a maximum ticket lifetime of 24 hours (for most user principals). What ensures that an expired Kerberos ticket can no longer be used?</td>
-                                <td>The Kerberos server (KDC) refuses to establish new connections between clients and servers for expired tickets., When a client connects to a server, the server sets a 24-hour timer to terminate the connection, which ensures a client cannot remain connected past the ticket’s maximum lifetime., When a client connects to a server, the server compares the ticket’s expiration time to the server’s current clock, and refuses to authenticate the user if the ticket expiration time is in the past., When a client connects to a server, the server sends a query to the KDC to check if the ticket is still valid with respect to the KDC’s clock, and refuses to authenticate the user if the KDC reports that the ticket is expired.</td>
-                                <td>C</td>
-                                <td>ANSWER: C</td>
-                                <td>C</td>
-                                <td>Yes</td>
-                                <td>346 ms</td>
-                                <td>2024-11-26T02:41:25.964Z</td>
+                                <td class="col-id">67453542268aa4370197bdfd</td>
+                                <td class="col-domain">Computer Security</td>
+                                <td class="col-question">MIT’s Kerberos KDC server has a maximum ticket lifetime of 24 hours (for most user principals). What ensures that an expired Kerberos ticket can no longer be used?</td>
+                                <td class="col-options">The Kerberos server (KDC) refuses to establish new connections between clients and servers for expired tickets., When a client connects to a server, the server sets a 24-hour timer to terminate the connection, which ensures a client cannot remain connected past the ticket’s maximum lifetime., When a client connects to a server, the server compares the ticket’s expiration time to the server’s current clock, and refuses to authenticate the user if the ticket expiration time is in the past., When a client connects to a server, the server sends a query to the KDC to check if the ticket is still valid with respect to the KDC’s clock, and refuses to authenticate the user if the KDC reports that the ticket is expired.</td>
+                                <td class="col-correct-answer">C</td>
+                                <td class="col-chatgpt-response">ANSWER: C</td>
+                                <td class="col-selected-answer">C</td>
+                                <td class="col-is-correct">Yes</td>
+                                <td class="col-response-time">346 ms</td>
+                                <td class="col-processed-at">2024-11-26T02:41:25.964Z</td>
                             </tr>
                             <tr>
-                                <td>67453542268aa4370197bdfe</td>
-                                <td>Computer Security</td>
-                                <td>In Message Confidentiality, the transmitted message must make sense to only intended</td>
-                                <td>Receiver, Sender, Modulor, Translator</td>
-                                <td>A</td>
-                                <td>ANSWER: A</td>
-                                <td>A</td>
-                                <td>Yes</td>
-                                <td>400 ms</td>
-                                <td>2024-11-26T02:41:26.366Z</td>
+                                <td class="col-id">67453542268aa4370197bdfe</td>
+                                <td class="col-domain">Computer Security</td>
+                                <td class="col-question">In Message Confidentiality, the transmitted message must make sense to only intended</td>
+                                <td class="col-options">Receiver, Sender, Modulor, Translator</td>
+                                <td class="col-correct-answer">A</td>
+                                <td class="col-chatgpt-response">ANSWER: A</td>
+                                <td class="col-selected-answer">A</td>
+                                <td class="col-is-correct">Yes</td>
+                                <td class="col-response-time">400 ms</td>
+                                <td class="col-processed-at">2024-11-26T02:41:26.366Z</td>
                             </tr>
                         </tbody>
                     </table>

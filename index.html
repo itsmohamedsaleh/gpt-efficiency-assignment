@@ -27,18 +27,18 @@
         <div class="content-container">
             <div id="introduction" class="section panel active">
                 <h2>Introduction</h2>
-                <p>This project, titled <strong>ChatGPT Validator</strong>, aims to systematically evaluate the performance and efficiency of ChatGPT across various domains. By leveraging a structured approach that integrates data management, web development, and artificial intelligence, the project provides insightful comparisons between human-generated answers and those produced by ChatGPT.</p>
-                <p>The workflow encompasses several key phases:
-                    <ol>
-                        <li><strong>Database Creation:</strong> Utilizing the terminal and Visual Studio Code (VSCode), we initiated the creation of a MongoDB database to store our dataset.</li>
-                        <li><strong>Backend Development:</strong> Employing Node.js and Express, we established a robust connection to the MongoDB database, facilitating seamless data operations.</li>
-                        <li><strong>API Integration:</strong> Through the OpenAI ChatGPT API, we implemented functionalities to generate responses based on user queries.</li>
-                        <li><strong>Data Population:</strong> We uploaded three CSV files containing a comprehensive set of questions and answers, which were then imported into the database. Subsequently, ChatGPT's responses to these questions were also stored for comparative analysis.</li>
-                        <li><strong>Performance Evaluation:</strong> By comparing the accuracy and response times of ChatGPT against the provided answers, we assessed the model's efficiency and reliability.</li>
-                        <li><strong>Results Presentation:</strong> The findings were visualized through various charts and statistical data, offering a clear overview of ChatGPT's performance across different domains.</li>
-                    </ol>
-                </p>
-                <p>The integration of these components not only demonstrates the practical applications of ChatGPT but also provides a framework for evaluating AI performance in real-world scenarios.</p>
+                <p>This project, <strong>ChatGPT Validator</strong>, aims to evaluate how well ChatGPT performs in different areas. We built a website that connects to a database and uses ChatGPT to answer questions. By comparing ChatGPT's answers to the correct ones, we can see how accurate and efficient the model is.</p>
+                <p>The workflow includes several key steps:</p>
+                <ol>
+                    <li><strong>Database Setup:</strong> Using the terminal and Visual Studio Code (VSCode), we created a MongoDB database to store our data.</li>
+                    <li><strong>Backend Development:</strong> We used Node.js and Express to connect to the MongoDB database, allowing us to manage data effectively.</li>
+                    <li><strong>API Integration:</strong> We integrated the ChatGPT API to generate responses based on user questions.</li>
+                    <li><strong>Data Upload:</strong> Three CSV files with questions and answers were uploaded to populate the database.</li>
+                    <li><strong>Response Collection:</strong> ChatGPT's answers to the questions were stored in the database for comparison.</li>
+                    <li><strong>Performance Analysis:</strong> We compared ChatGPT's answers to the correct ones to measure accuracy and response time.</li>
+                    <li><strong>Results Display:</strong> The results were shown using charts and statistics to highlight ChatGPT's performance.</li>
+                </ol>
+                <p>This project not only shows how ChatGPT works but also provides a way to measure its effectiveness in different subjects.</p>
             </div>
 
             <div id="profile" class="section panel">
@@ -62,18 +62,18 @@
 
             <div id="research-approach" class="section panel">
                 <h2>Research Approach</h2>
-                <p>The research methodology for the <strong>ChatGPT Validator</strong> project was meticulously designed to ensure comprehensive evaluation and reliable results. The approach can be broken down into the following detailed steps:</p>
+                <p>The research for the <strong>ChatGPT Validator</strong> project followed a clear and organized method to ensure accurate results. Here are the main steps we took:</p>
                 <ul>
-                    <li><strong>Environment Setup:</strong> Using Visual Studio Code (VSCode) as the primary development environment, we initialized the project repository and configured necessary dependencies.</li>
-                    <li><strong>Database Creation:</strong> Through the terminal, we set up a MongoDB database to store all relevant data. This involved defining schemas for questions, answers, and ChatGPT responses to maintain structured and efficient data storage.</li>
-                    <li><strong>Backend Development:</strong> Leveraging Node.js and Express, we developed the server-side application to handle API requests, manage database interactions, and facilitate communication between the frontend and the backend systems.</li>
-                    <li><strong>API Integration:</strong> We integrated the OpenAI ChatGPT API using the `chat.completion` endpoint. This enabled the application to send queries to ChatGPT and retrieve generated responses programmatically.</li>
-                    <li><strong>Data Ingestion:</strong> Three CSV files containing a diverse set of questions and corresponding correct answers were uploaded and parsed. These data points were then inserted into the MongoDB database, ensuring that each entry was properly indexed and retrievable.</li>
-                    <li><strong>Populating ChatGPT Responses:</strong> For each question in the database, a request was sent to the ChatGPT API to obtain its answer. These responses were stored in the database alongside the original questions and correct answers.</li>
-                    <li><strong>Comparative Analysis:</strong> We conducted a thorough comparison between the correct answers and ChatGPT's responses. Metrics such as accuracy, response time, and efficiency were calculated to evaluate performance.</li>
-                    <li><strong>Result Visualization:</strong> The analyzed data was presented through interactive charts and statistical summaries, providing clear insights into ChatGPT's strengths and areas for improvement across different domains.</li>
+                    <li><strong>Setting Up the Environment:</strong> We used Visual Studio Code (VSCode) to start the project and set up all necessary tools.</li>
+                    <li><strong>Creating the Database:</strong> Through the terminal, we set up a MongoDB database to store questions, answers, and ChatGPT responses. We defined the database structure to keep the data organized.</li>
+                    <li><strong>Developing the Backend:</strong> Using Node.js and Express, we built the server-side application. This handled API requests, managed the database, and connected the frontend with the backend.</li>
+                    <li><strong>Integrating the ChatGPT API:</strong> We connected to the ChatGPT API using the `chat.completion` endpoint. This allowed our application to send questions to ChatGPT and receive answers automatically.</li>
+                    <li><strong>Uploading Data:</strong> We uploaded three CSV files containing a variety of questions and their correct answers. These were imported into the MongoDB database.</li>
+                    <li><strong>Collecting ChatGPT Responses:</strong> For each question in the database, we sent a request to ChatGPT and saved its response in the database.</li>
+                    <li><strong>Comparing Answers:</strong> We compared ChatGPT's answers with the correct ones to measure accuracy and response time.</li>
+                    <li><strong>Visualizing Results:</strong> The comparison results were displayed using charts and statistics to make the data easy to understand.</li>
                 </ul>
-                <p>By following this structured approach, the project ensures a systematic evaluation of ChatGPT's capabilities, offering valuable data-driven insights into its performance.</p>
+                <p>This structured approach helped us thoroughly evaluate ChatGPT's performance and provided clear insights into its strengths and areas for improvement.</p>
             </div>
 
             <div id="dataset-overview" class="section panel">
@@ -126,6 +126,11 @@
                     </div>
                 </div>
 
+                <!-- Results Explanation -->
+                <div class="results-explanation">
+                    <p>The results show that ChatGPT performs consistently across different domains, with accuracy ranging from 84% to 88%. The response times are all under half a second, indicating efficient performance. These findings suggest that ChatGPT is a reliable tool for answering questions in various fields, though there is still room for improvement in accuracy.</p>
+                </div>
+    
                 <!-- Charts -->
                 <div class="chart-container">
                     <h3>Accuracy by Domain (%)</h3>
